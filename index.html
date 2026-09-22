@@ -1,86 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Happy Birthday Gaytri ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Gaytri ❤️</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffd6e7, #fff0f6);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .card {
-      background: white;
-      width: 85%;
-      max-width: 400px;
-      padding: 35px 20px;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#ff9ecf,#c9a7ff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  font-family:Arial,sans-serif;
+  color:white;
+}
 
-    h1 {
-      color: #ff4f81;
-      font-size: 32px;
-    }
+.container{
+  text-align:center;
+  padding:25px;
+  animation:fadeIn 2s ease;
+}
 
-    h2 {
-      color: #333;
-    }
+.small{
+  font-size:20px;
+  animation:float 2s infinite alternate;
+}
 
-    p {
-      color: #666;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+h1{
+  font-size:42px;
+  margin:15px 0;
+  text-shadow:0 4px 15px rgba(0,0,0,.2);
+}
 
-    .heart {
-      font-size: 55px;
-      animation: beat 1s infinite;
-    }
+.name{
+  font-size:55px;
+  font-weight:bold;
+  color:#fff;
+  animation:zoom 2s infinite alternate;
+}
 
-    @keyframes beat {
-      50% { transform: scale(1.2); }
-    }
+.message{
+  font-size:19px;
+  line-height:1.6;
+  margin-top:20px;
+}
 
-    button {
-      background: #ff4f81;
-      color: white;
-      border: none;
-      padding: 14px 25px;
-      border-radius: 30px;
-      font-size: 17px;
-      cursor: pointer;
-    }
-  </style>
+.heart{
+  font-size:55px;
+  margin-top:20px;
+  animation:beat 1s infinite;
+}
+
+button{
+  margin-top:25px;
+  padding:13px 28px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#e85ba8;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes zoom{
+  from{transform:scale(1);}
+  to{transform:scale(1.08);}
+}
+
+@keyframes beat{
+  50%{transform:scale(1.25);}
+}
+
+@keyframes float{
+  from{transform:translateY(0);}
+  to{transform:translateY(-10px);}
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <div class="heart">🎂❤️</div>
-<img src="_MG_0484.jpeg" alt="Gaytri" style="width:100%; max-width:300px; border-radius:20px; margin:20px 0;">
+<div class="container">
 
-<img src="_MG_0529.jpeg" alt="Gaytri" style="width:100%; max-width:300px; border-radius:20px; margin:20px 0;">
-    <h1>Happy Birthday Gaytri! 🎉</h1>
+  <div class="small">✨ A Little Surprise For You ✨</div>
 
-    <h2>✨ Many Many Happy Returns of the Day ✨</h2>
+  <h1>Happy Birthday in Advance</h1>
 
-    <p>
-      Wishing you lots of happiness, love and beautiful moments. 💕
-      May all your dreams come true and your smile always stay the same! 😊
-    </p>
+  <div class="name">Gaytri ❤️</div>
 
-    <button onclick="alert('Once again, Happy Birthday Gaytri! ❤️🎂')">
-      Click Me 💖
-    </button>
-  </div>
+  <p class="message">
+    काही लोक आयुष्यात येतात<br>
+    आणि आयुष्य थोडं जास्त सुंदर करून जातात... 💕<br><br>
+
+    तू त्यापैकीच एक आहेस! 🌸<br>
+    तुझा Birthday येण्याआधीच<br>
+    तुला माझ्याकडून एक छोटीशी wish... 🎂✨
+  </p>
+
+  <div class="heart">💖</div>
+
+  <button onclick="showWish()">Tap For A Surprise 🎁</button>
+
+</div>
+
+<script>
+function showWish(){
+  alert("Happy Birthday in Advance Gaytri! 🎂❤️ May your special day be filled with lots of happiness, smiles and beautiful memories! ✨");
+}
+</script>
 
 </body>
 </html>
