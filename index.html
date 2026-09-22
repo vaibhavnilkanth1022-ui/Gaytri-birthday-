@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Gaytri ❤️</title>
 
 <style>
@@ -14,85 +15,105 @@
 
 body{
   min-height:100vh;
-  background:linear-gradient(135deg,#ff9ecf,#c9a7ff);
+  overflow:hidden;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#ff8fc7,#9d8cff);
+  color:white;
   display:flex;
   justify-content:center;
   align-items:center;
-  overflow:hidden;
-  font-family:Arial,sans-serif;
-  color:white;
 }
 
 .container{
   text-align:center;
-  padding:25px;
-  animation:fadeIn 2s ease;
+  padding:20px;
+  animation:pageIn 2s ease;
 }
 
-.small{
-  font-size:20px;
+.top{
+  font-size:19px;
   animation:float 2s infinite alternate;
 }
 
 h1{
-  font-size:42px;
-  margin:15px 0;
-  text-shadow:0 4px 15px rgba(0,0,0,.2);
+  margin:12px 0;
+  font-size:35px;
 }
 
 .name{
-  font-size:55px;
+  font-size:52px;
   font-weight:bold;
-  color:#fff;
-  animation:zoom 2s infinite alternate;
+  margin-bottom:18px;
+  animation:nameIn 2s ease;
+}
+
+.photo{
+  width:210px;
+  height:210px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid white;
+  box-shadow:0 0 30px rgba(255,255,255,.8);
+  animation:photoIn 2.5s ease, glow 2s infinite alternate;
 }
 
 .message{
-  font-size:19px;
+  margin:20px auto;
+  max-width:330px;
+  font-size:17px;
   line-height:1.6;
-  margin-top:20px;
 }
 
 .heart{
-  font-size:55px;
-  margin-top:20px;
-  animation:beat 1s infinite;
+  font-size:45px;
+  animation:heartBeat 1s infinite;
 }
 
 button{
-  margin-top:25px;
+  margin-top:18px;
   padding:13px 28px;
   border:none;
   border-radius:30px;
   background:white;
-  color:#e85ba8;
-  font-size:17px;
+  color:#e34f9d;
+  font-size:16px;
   font-weight:bold;
-  cursor:pointer;
   box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
-button:active{
-  transform:scale(.95);
+@keyframes pageIn{
+  from{opacity:0;transform:translateY(50px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(40px);}
-  to{opacity:1; transform:translateY(0);}
+@keyframes nameIn{
+  from{opacity:0;transform:scale(.3)}
+  to{opacity:1;transform:scale(1)}
 }
 
-@keyframes zoom{
-  from{transform:scale(1);}
-  to{transform:scale(1.08);}
+@keyframes photoIn{
+  from{
+    opacity:0;
+    transform:scale(.2) rotate(-20deg);
+  }
+  to{
+    opacity:1;
+    transform:scale(1) rotate(0);
+  }
 }
 
-@keyframes beat{
-  50%{transform:scale(1.25);}
+@keyframes glow{
+  from{box-shadow:0 0 15px white}
+  to{box-shadow:0 0 40px #fff}
+}
+
+@keyframes heartBeat{
+  50%{transform:scale(1.3)}
 }
 
 @keyframes float{
-  from{transform:translateY(0);}
-  to{transform:translateY(-10px);}
+  from{transform:translateY(0)}
+  to{transform:translateY(-8px)}
 }
 </style>
 </head>
@@ -101,32 +122,29 @@ button:active{
 
 <div class="container">
 
-  <div class="small">✨ A Little Surprise For You ✨</div>
+  <div class="top">✨ A Little Surprise For You ✨</div>
 
-  <h1>Happy Birthday in Advance</h1>
+  <h1>Happy Birthday in Advance 🎂</h1>
 
   <div class="name">Gaytri ❤️</div>
+
+  <img src="_MG_0484.jpeg" class="photo">
 
   <p class="message">
     काही लोक आयुष्यात येतात<br>
     आणि आयुष्य थोडं जास्त सुंदर करून जातात... 💕<br><br>
 
     तू त्यापैकीच एक आहेस! 🌸<br>
-    तुझा Birthday येण्याआधीच<br>
-    तुला माझ्याकडून एक छोटीशी wish... 🎂✨
+    तुझ्यासाठी ही छोटीशी surprise wish... ✨
   </p>
 
   <div class="heart">💖</div>
 
-  <button onclick="showWish()">Tap For A Surprise 🎁</button>
+  <button onclick="alert('Happy Birthday in Advance Gaytri! 🎂❤️✨')">
+    Tap For A Surprise 🎁
+  </button>
 
 </div>
-
-<script>
-function showWish(){
-  alert("Happy Birthday in Advance Gaytri! 🎂❤️ May your special day be filled with lots of happiness, smiles and beautiful memories! ✨");
-}
-</script>
 
 </body>
 </html>
